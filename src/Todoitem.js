@@ -27,7 +27,7 @@ function Todoitem(props) {
 
       <button style={delbutton} 
         onClick={() => props.onSelect(props.id)}>
-        <i class="fa fa-times"></i>
+        <i className="fa fa-times"></i>
       </button>
     </li>
     </>
