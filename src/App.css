@@ -1,0 +1,90 @@
+.App {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-body {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  height: 500px;
+  width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-fields {
+  display: flex;
+}
+
+.input-fields input[type='text'] {
+  flex-grow: 4;
+  z-index: 1;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-right: none;
+  font-size: inherit;
+}
+
+.input-fields input[type='text']:focus {
+  outline: 3px solid rgba(30, 143, 255, 0.355);
+}
+
+.input-fields button {
+  flex-grow: 1;
+  align-items: center;
+  font-size: inherit;
+  border: 1px solid dodgerblue;
+  padding: 10px 15px;
+  border-radius: 0 10px 10px 0;
+  background-color: dodgerblue;
+  color: white;
+  transition: 0.5s;
+}
+
+.input-fields button:hover {
+  background-color: darkblue;
+}
+
+.main-body hr {
+  border: 1px solid #ddd;
+  margin: 10px 20px;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+
+.todolistbox {
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  margin: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
