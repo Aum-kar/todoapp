@@ -1,12 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function Todoitem(props) {
 
-  const [checked, setChecked] = useState(false);
-
-  function handleChecked() {
-    setChecked(!checked);
-  }
 
   return (
     <>
@@ -14,15 +9,9 @@ function Todoitem(props) {
       <span>
         <input type='checkbox' 
           id={'todoitem'+props.id} 
-          checked={checked} 
-          onChange={handleChecked} />
+          onClick={()=>props.onCheck(props.id)} />
 
-        <label htmlFor={'todoitem'+props.id}
-          style={checked
-          ?{textDecoration:"line-through"}
-          :{textDecoration:"none"}}>
-        {props.element}
-        </label>
+        <label htmlFor={'todoitem'+props.id}>{props.element}</label>
       </span>
 
       <button style={delbutton} 

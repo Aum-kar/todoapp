@@ -1,3 +1,5 @@
+
+
 .App {
   display: flex;
   gap: 10px;
@@ -39,7 +41,6 @@
 
 .input-fields button {
   flex-grow: 1;
-  align-items: center;
   font-size: inherit;
   border: 1px solid dodgerblue;
   padding: 10px 15px;
@@ -60,14 +61,25 @@
   box-sizing: border-box;
 }
 
-.todolistbox {
-  height: 425px;
+.todolistbox, .completedtodobox {
+  height: 225px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
   overflow-x: hidden;
   user-select: none;
+}
+
+/* .completedtodobox {
+  height: 200px;
+  border: 1px solid #ddd;
+  
+} */
+
+.completedtodobox span {
+  font-size: 12px;
+  margin-left: 12px;
 }
 
 ::-webkit-scrollbar {
@@ -79,12 +91,16 @@
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media only screen and (max-width: 400px) {
+  .main-body {
+    width: 85vw;
+  }
 }
